@@ -1,7 +1,6 @@
-import pyfiglet
-
-while True:
-    def calculator():
+#define a class that represents the Calculator 
+class Calculator:
+    def calc_function():
         """It takes the user's inputs for the two numbers and operation to perform,
         do computation, and displays the result on the screen."""
         # ask the user to choose one of four math operations:
@@ -49,18 +48,3 @@ while True:
             print("=" * 25)
             return output
             
-    # Call the function to perform the calculation and print the result
-    output = calculator()
-    print(f"\033[91mResult:\033[0m {output}")
-    print(".\n.\n.")
-        
-    # use loop to ask if the user wants to try again or not.
-    user_attempt = input("Do you want to try again or not? (yes/no): ")
-    ## If yes, then perform the operation again.
-    ## if no, Display “Thank you!”
-    if user_attempt == "no":
-        print(pyfiglet.figlet_format("Thank you!"))
-        break
-    
-    # then the program will exit
-calculator()
