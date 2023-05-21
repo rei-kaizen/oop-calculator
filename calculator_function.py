@@ -2,9 +2,6 @@ import pyfiglet
 
 #define a class that represents the Calculator 
 class Calculator:
-    def __init__(self, output = "None"):
-        #associate output var with a value
-        self.output = output
     
     def calc_function(self):
         """It takes the user's inputs for the two numbers and operation to perform, and
@@ -17,6 +14,9 @@ class Calculator:
         self.user_num1 = input("Enter the 1st number: ")
         self.user_num2 = input("Enter the 2nd number: ")
         
+        #associate output var with a value
+        output = None
+        
         # use Python Functions and appropriate Exceptions to capture errors during runtime.
         try:
             if (self.user_num1.isnumeric() and self.user_num2.isnumeric()):
@@ -24,11 +24,11 @@ class Calculator:
                 self.user_num2 = float(self.user_num2)  
                 # display the result
                 if self.user_choice_operation.lower() == "addition":
-                    self.output = self.user_num1 + self.user_num2
+                    output = self.user_num1 + self.user_num2
                 elif self.user_choice_operation.lower() == "subtraction":
-                    self.output = self.user_num1 - self.user_num2
+                    output = self.user_num1 - self.user_num2
                 elif self.user_choice_operation.lower() == "multiplication":
-                    self.output = self.user_num1 * self.user_num2
+                    output = self.user_num1 * self.user_num2
                 elif self.user_choice_operation.lower() == "division":
                     if self.user_num2 == 0:
                         raise ZeroDivisionError("Division by zero is undefined :|")
@@ -52,7 +52,7 @@ class Calculator:
 
         finally:
             print("=" * 25)
-            return self.output
+            return output
     
     def retry(self):
         while True:
@@ -61,8 +61,8 @@ class Calculator:
             
             # if yes, then perform the operation again.
             if self.user_attempt == "yes":
-                self.output = self.calc_function()
-                print(f"\033[91mResult:\033[0m {self.output}")
+                output = self.calc_function()
+                print(f"\033[91mResult:\033[0m {output}")
                 print(".\n.\n.")
 
             else:
