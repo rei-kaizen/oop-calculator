@@ -2,11 +2,23 @@ import pyfiglet
 
 #define a class that represents the Calculator 
 class Calculator:
-    
+    """
+    A class that represents the Calculator
+    """
     def calc_function(self):
-        """It takes the user's inputs for the two numbers and operation to perform, and
-        do computation"""
-        
+        """This function assesses and calculates the value based on the user's input. 
+        First, it asks the user to choose an operation and enter two numbers. 
+        Once the chosen operation is conducted, the output value is returned. 
+
+        Raises:
+            ZeroDivisionError: Raised if the user tries to divide by zero.
+            Exception: Raised if an invalid operation is chosen.
+            ValueError: Raised if the user enters invalid numbers.
+
+        Returns:
+            float: The result of the calculation, or None if an error occurred.
+        """
+
         # ask the user to choose one of four math operations:
         self.user_choice_operation = input("Choose one of the operations (Addition, Subtraction, Multiplication, and Division): ")  
         ## Addition, Subtraction, Multiplication, and Division
@@ -55,6 +67,12 @@ class Calculator:
             return output
     
     def retry(self):
+        """
+        This function allows the user to retry using the calculator. 
+        It asks the user if they would like to try again or quit the program. 
+        If the user decides to make another attempt, the calc_function method should be called once more. 
+        If the user decides to leave, display a thank-you message .
+        """
         # loop to let the user make another attempt
         while True:
             # ask if the user wants to try again or not.
