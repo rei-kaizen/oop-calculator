@@ -1,3 +1,5 @@
+import pyfiglet
+
 #define a class that represents the Calculator 
 class Calculator:
     def calc_function(self):
@@ -47,4 +49,11 @@ class Calculator:
         finally:
             print("=" * 25)
             return output
-            
+    
+    def retry():
+        # ask if the user wants to try again or not.
+        user_attempt = input("Do you want to try again or not? (yes/no): ")
+        ## If yes, then perform the operation again.
+        ## if no, Display “Thank you!”
+        if user_attempt == "no":
+            print(pyfiglet.figlet_format("Thank you!"))   
