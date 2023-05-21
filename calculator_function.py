@@ -5,6 +5,7 @@ class Calculator:
     def calc_function(self):
         """It takes the user's inputs for the two numbers and operation to perform, and
         do computation"""
+        
         # ask the user to choose one of four math operations:
         user_choice_operation = input("Choose one of the operations (Addition, Subtraction, Multiplication, and Division): ")  
         ## Addition, Subtraction, Multiplication, and Division
@@ -12,6 +13,8 @@ class Calculator:
         user_num1 = input("Enter the 1st number: ")
         user_num2 = input("Enter the 2nd number: ")
         
+        #associate output var with a value
+        output = 0
         
         # use Python Functions and appropriate Exceptions to capture errors during runtime.
         try:
