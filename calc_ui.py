@@ -9,4 +9,6 @@ while True:
     output = ui.calc_function()
     print(f"\033[91mResult:\033[0m {output}")
     print(".\n.\n.")
+    # call the retry function from the ui instance to allow tthe user to try again
+    ui.retry()
     break

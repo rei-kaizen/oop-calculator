@@ -19,13 +19,13 @@ class Calculator:
                 user_num1 = float(user_num1)
                 user_num2 = float(user_num2)  
                 # display the result
-                if user_choice_operation == "Addition":
+                if user_choice_operation.lower() == "addition":
                     output = user_num1 + user_num2
-                elif user_choice_operation == "Subtraction":
+                elif user_choice_operation.lower() == "subtraction":
                     output =user_num1 - user_num2
-                elif user_choice_operation == "Multiplication":
+                elif user_choice_operation.lower() == "multiplication":
                     output =user_num1 * user_num2
-                elif user_choice_operation == "Division":
+                elif user_choice_operation.lower() == "division":
                     if user_num2 == 0:
                         raise ZeroDivisionError("Division by zero is undefined :|")
                     output = user_num1 / user_num2
