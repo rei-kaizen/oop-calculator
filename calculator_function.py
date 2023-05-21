@@ -32,7 +32,7 @@ class Calculator:
                 elif self.user_choice_operation.lower() == "division":
                     if self.user_num2 == 0:
                         raise ZeroDivisionError("Division by zero is undefined :|")
-                    self.output = self.user_num1 / self.user_num2
+                    output = self.user_num1 / self.user_num2
                 else:
                     raise Exception("Add, Subtract, Multiplication and Division operations only :(")
             else:
@@ -55,6 +55,7 @@ class Calculator:
             return output
     
     def retry(self):
+        # loop to let the user make another attempt
         while True:
             # ask if the user wants to try again or not.
             self.user_attempt = input("Do you want to try again or not? (yes/no): ")
