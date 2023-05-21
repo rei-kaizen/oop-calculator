@@ -31,12 +31,12 @@ class Calculator:
                     output = self.user_num1 * self.user_num2
                 elif self.user_choice_operation.lower() == "division":
                     if self.user_num2 == 0:
-                        raise ZeroDivisionError("Division by zero is undefined :|")
+                        raise ZeroDivisionError("\033[93m: Division by zero is undefined :|\033[0m")
                     output = self.user_num1 / self.user_num2
                 else:
-                    raise Exception("Add, Subtract, Multiplication and Division operations only :(")
+                    raise Exception("\033[93m: Add, Subtract, Multiplication and Division operations only :(\033[0m")
             else:
-                raise ValueError("Please enter a valid numbers :)")
+                raise ValueError("\033[93m: Please enter a valid numbers :)\033[0m")
         
         except ValueError as raised :
             print(raised)
