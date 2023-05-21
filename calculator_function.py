@@ -6,7 +6,8 @@ class Calculator:
     A class that represents the Calculator
     """
     def calc_function(self):
-        """This function assesses and calculates the value based on the user's input. 
+        """
+        This function assesses and calculates the value based on the user's input. 
         First, it asks the user to choose an operation and enter two numbers. 
         Once the chosen operation is conducted, the output value is returned. 
 
