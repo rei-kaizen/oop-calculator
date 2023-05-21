@@ -1,8 +1,8 @@
 #define a class that represents the Calculator 
 class Calculator:
-    def calc_function():
-        """It takes the user's inputs for the two numbers and operation to perform,
-        do computation, and displays the result on the screen."""
+    def calc_function(self):
+        """It takes the user's inputs for the two numbers and operation to perform, and
+        do computation"""
         # ask the user to choose one of four math operations:
         user_choice_operation = input("Choose one of the operations (Addition, Subtraction, Multiplication, and Division): ")  
         ## Addition, Subtraction, Multiplication, and Division
