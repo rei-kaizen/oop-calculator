@@ -50,10 +50,16 @@ class Calculator:
             print("=" * 25)
             return output
     
-    def retry():
+    def retry(self):
         # ask if the user wants to try again or not.
         user_attempt = input("Do you want to try again or not? (yes/no): ")
-        ## If yes, then perform the operation again.
-        ## if no, Display “Thank you!”
-        if user_attempt == "no":
-            print(pyfiglet.figlet_format("Thank you!"))   
+        
+        # if yes, then perform the operation again.
+        if user_attempt == "yes":
+            output = self.calc_function()
+            print(f"\033[91mResult:\033[0m {output}")
+            print(".\n.\n.")
+
+        else:
+            # if no, Display “Thank you!”
+            print(pyfiglet.figlet_format("Thank you!"))      
