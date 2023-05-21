@@ -2,36 +2,37 @@ import pyfiglet
 
 #define a class that represents the Calculator 
 class Calculator:
+    def __init__(self, output = "None"):
+        #associate output var with a value
+        self.output = output
+    
     def calc_function(self):
         """It takes the user's inputs for the two numbers and operation to perform, and
         do computation"""
         
         # ask the user to choose one of four math operations:
-        user_choice_operation = input("Choose one of the operations (Addition, Subtraction, Multiplication, and Division): ")  
+        self.user_choice_operation = input("Choose one of the operations (Addition, Subtraction, Multiplication, and Division): ")  
         ## Addition, Subtraction, Multiplication, and Division
         # ask the user to enter two numbers
-        user_num1 = input("Enter the 1st number: ")
-        user_num2 = input("Enter the 2nd number: ")
-        
-        #associate output var with a value
-        output = 0
+        self.user_num1 = input("Enter the 1st number: ")
+        self.user_num2 = input("Enter the 2nd number: ")
         
         # use Python Functions and appropriate Exceptions to capture errors during runtime.
         try:
-            if (user_num1.isnumeric() and user_num2.isnumeric()):
-                user_num1 = float(user_num1)
-                user_num2 = float(user_num2)  
+            if (self.user_num1.isnumeric() and self.user_num2.isnumeric()):
+                self.user_num1 = float(self.user_num1)
+                self.user_num2 = float(self.user_num2)  
                 # display the result
-                if user_choice_operation.lower() == "addition":
-                    output = user_num1 + user_num2
-                elif user_choice_operation.lower() == "subtraction":
-                    output =user_num1 - user_num2
-                elif user_choice_operation.lower() == "multiplication":
-                    output =user_num1 * user_num2
-                elif user_choice_operation.lower() == "division":
-                    if user_num2 == 0:
+                if self.user_choice_operation.lower() == "addition":
+                    self.output = self.user_num1 + self.user_num2
+                elif self.user_choice_operation.lower() == "subtraction":
+                    self.output = self.user_num1 - self.user_num2
+                elif self.user_choice_operation.lower() == "multiplication":
+                    self.output = self.user_num1 * self.user_num2
+                elif self.user_choice_operation.lower() == "division":
+                    if self.user_num2 == 0:
                         raise ZeroDivisionError("Division by zero is undefined :|")
-                    output = user_num1 / user_num2
+                    self.output = self.user_num1 / self.user_num2
                 else:
                     raise Exception("Add, Subtract, Multiplication and Division operations only :(")
             else:
@@ -51,18 +52,20 @@ class Calculator:
 
         finally:
             print("=" * 25)
-            return output
+            return self.output
     
     def retry(self):
-        # ask if the user wants to try again or not.
-        user_attempt = input("Do you want to try again or not? (yes/no): ")
-        
-        # if yes, then perform the operation again.
-        if user_attempt == "yes":
-            output = self.calc_function()
-            print(f"\033[91mResult:\033[0m {output}")
-            print(".\n.\n.")
+        while True:
+            # ask if the user wants to try again or not.
+            self.user_attempt = input("Do you want to try again or not? (yes/no): ")
+            
+            # if yes, then perform the operation again.
+            if self.user_attempt == "yes":
+                self.output = self.calc_function()
+                print(f"\033[91mResult:\033[0m {self.output}")
+                print(".\n.\n.")
 
-        else:
-            # if no, Display “Thank you!”
-            print(pyfiglet.figlet_format("Thank you!"))      
+            else:
+                # if no, Display “Thank you!”
+                print(pyfiglet.figlet_format("Thank you!"))
+                break      
