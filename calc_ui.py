@@ -1,12 +1,16 @@
-from calculator_function import Calculator #import Calculator class from calculator function
+from calculation import Calculate
+from retry_function import TryAgain
 
-# create the instance of the Calculator class
-ui = Calculator()
+# create the instance of the Calculate class
+ui1 = Calculate()
+
+# create the instance of the TryAgain class
+ui2 = TryAgain() 
 
 # call the calc_function method from  the  ui instance to perform the calculation and print the result
-output = ui.calculation()
+output = ui1.calculation()
 print(f"\033[91mResult:\033[0m {output}")
 print(".\n.\n.")
 
 # call the retry function from the ui instance to allow tthe user to try again
-ui.retry()
+ui2.retry()
