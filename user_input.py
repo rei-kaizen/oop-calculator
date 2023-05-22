@@ -21,4 +21,3 @@ class Input:
         # ask the user to enter two numbers
         self.num1 = input("Enter the 1st number: ")
         self.num2 = input("Enter the 2nd number: ")
-        

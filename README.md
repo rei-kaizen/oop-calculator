@@ -26,29 +26,22 @@ or
 
 **Reminders:**
 > The program uses appropriate exception handling to capture errors during runtime, such as invalid inputs or division by zero.
+> Ensure that the following required dependencies are installed: `pyfiglet`
+
 </details>
 
 <details><summary><h3> 🔰 Additional information </h3></summary>
 
 -----
 
-**Program: Simple Calculator**
+**The Calculator App consists of the following files:**
 <br>
-
--The program prompts the user for inputs and provides clear instructions for the chosen operation. 
-  
--The `calculator()` function takes no arguments and prompts the user to choose math operations.
-  
--This program uses the `pyfiglet` module to have ASCII art representation of **Thank you!** message.<br>
-  > This requires the following dependencies to be installed: pyfiglet.<br>
-  
--The program uses appropriate exception handling to capture errors during runtime, such as invalid inputs or division by zero. If an error occurs, the program prints a message describing the error and returns None.<br>
-  > Exceptions <br>
-  ValueError: raised if the user enters an invalid number.<br>
-  ZeroDivisionError: raised if the user tries to divide by zero.<br>
-  Exception: raised if the user enters an invalid operation.
--
-
+1. `user_input.py`: Defines the Input class that represents user input.
+2. `calculation.py`: Defines the Calculate class that performs calculations based on user input.
+3. `retry_function.py`: Defines the TryAgain class that allows users to retry or exit the program.
+4. `main.py`: The main script that creates instances of the Calculate and TryAgain classes and controls the flow of the application.
+<br>
+For detailed information about the implementation of each class and their methods, please refer to the source code files and their respective docstrings.
 
 </details>
 
@@ -56,6 +49,6 @@ or
 
 -----
 
-The purpose of this program is to provide a basic calculator functionality for simple math operations. It can be used as a reference to understand how to use Python functions and exception handling to build a command-line application.
+This object-oriented calculator uses many classes to handle user input, calculations, and retry functions. Its structure leads to modularity and ease of maintenance in the code. By providing an intuitive user interface, error handling, and a reusable code structure, this program's purpose is to enhance the user experience and make basic mathematical calculations more practical.
 
 </details>
