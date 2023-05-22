@@ -9,10 +9,11 @@ class Calculator:
         """
         This function asks the user to choose an operation and enter two numbers. 
         """
-
         # ask the user to choose one of four math operations:
+        # Addition, Subtraction, Multiplication, and Division
         self.user_choice_operation = input("Choose one of the operations (Addition, Subtraction, Multiplication, and Division): ")  
-        ## Addition, Subtraction, Multiplication, and Division
+
+        
         # ask the user to enter two numbers
         self.user_num1 = input("Enter the 1st number: ")
         self.user_num2 = input("Enter the 2nd number: ")
@@ -31,7 +32,6 @@ class Calculator:
         Returns:
             float: The result of the calculation, or None if an error occurred.
         """
-
         #call the user_input method to get data from the user
         self.user_input()
         
@@ -92,7 +92,8 @@ class Calculator:
                 output = self.calculate()
                 print(f"\033[91mResult:\033[0m {output}")
                 print(".\n.\n.")
+                
+            # if no, Display “Thank you!”    
             elif self.user_attempt == "no":
-                # if no, Display “Thank you!”
                 print(pyfiglet.figlet_format("Thank you!"))
                 break      
