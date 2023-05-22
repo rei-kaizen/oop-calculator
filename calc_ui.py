@@ -4,7 +4,7 @@ from calculator_function import Calculator #import Calculator class from calcula
 ui = Calculator()
 
 # call the calc_function method from  the  ui instance to perform the calculation and print the result
-output = ui.calc_function()
+output = ui.calculation()
 print(f"\033[91mResult:\033[0m {output}")
 print(".\n.\n.")
 

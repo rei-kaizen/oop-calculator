@@ -5,7 +5,7 @@ class Calculator:
     """
     A class that represents the Calculator
     """
-    def calc_function(self):
+    def user_input(self):
         """
         This function assesses and calculates the value based on the user's input. 
         First, it asks the user to choose an operation and enter two numbers. 
@@ -26,6 +26,11 @@ class Calculator:
         # ask the user to enter two numbers
         self.user_num1 = input("Enter the 1st number: ")
         self.user_num2 = input("Enter the 2nd number: ")
+        
+       
+    def calculation(self):
+        
+        self.user_input()
         
         #associate output var with a value
         output = None
@@ -81,7 +86,7 @@ class Calculator:
             
             # if yes, then perform the operation again.
             if self.user_attempt == "yes":
-                output = self.calc_function()
+                output = self.calculate()
                 print(f"\033[91mResult:\033[0m {output}")
                 print(".\n.\n.")
             elif self.user_attempt == "no":
