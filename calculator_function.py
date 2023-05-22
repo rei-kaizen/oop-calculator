@@ -7,17 +7,7 @@ class Calculator:
     """
     def user_input(self):
         """
-        This function assesses and calculates the value based on the user's input. 
-        First, it asks the user to choose an operation and enter two numbers. 
-        Once the chosen operation is conducted, the output value is returned. 
-
-        Raises:
-            ZeroDivisionError: Raised if the user tries to divide by zero.
-            Exception: Raised if an invalid operation is chosen.
-            ValueError: Raised if the user enters invalid numbers.
-
-        Returns:
-            float: The result of the calculation, or None if an error occurred.
+        This function asks the user to choose an operation and enter two numbers. 
         """
 
         # ask the user to choose one of four math operations:
@@ -29,7 +19,20 @@ class Calculator:
         
        
     def calculation(self):
-        
+        """
+        This function assesses and calculates the value based on the user's input. 
+        Once the chosen operation is conducted, the output value is returned. 
+
+        Raises:
+            ZeroDivisionError: Raised if the user tries to divide by zero.
+            Exception: Raised if an invalid operation is chosen.
+            ValueError: Raised if the user enters invalid numbers.
+
+        Returns:
+            float: The result of the calculation, or None if an error occurred.
+        """
+
+        #call the user_input method to get data from the user
         self.user_input()
         
         #associate output var with a value
