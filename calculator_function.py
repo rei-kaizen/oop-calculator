@@ -84,8 +84,7 @@ class Calculator:
                 output = self.calc_function()
                 print(f"\033[91mResult:\033[0m {output}")
                 print(".\n.\n.")
-
-            else:
+            elif self.user_attempt == "no":
                 # if no, Display “Thank you!”
                 print(pyfiglet.figlet_format("Thank you!"))
                 break      
