@@ -2,10 +2,10 @@
 This is an oop version of my simple calculator program. Still, it has functions for doing simple mathematical operations, cuztomizing output, dealing with errors of any kind, and interacting with the user via a command-line interface.
 
 **The following is an old sample demo:** <br>
-![img](calc-demo.png)
+![img](./demo/calc-demo.png)
 
 **Here is the sample updated demo:** <br>
-![img](calcplus-demo.png)
+![img](./demo/calcplus-demo.png)
 
 ## 📄 Documentation 
 <details><summary><h3> 🤔 Usage </h3></summary>
