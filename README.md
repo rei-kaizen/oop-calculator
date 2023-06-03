@@ -5,7 +5,7 @@ This is an oop version of my simple calculator program. Still, it has functions 
 ![img](./demo/calc-demo.png)
 
 **Here is the sample updated demo:** <br>
-![img](./demo/calcplus-demo.png)
+![img](./demo/calc-plus.png)
 
 ## 📄 Documentation 
 <details><summary><h3> 🤔 Usage </h3></summary>
