@@ -11,14 +11,18 @@ class OutputConverter(Calculate):
         
         option = input("Input the corresponding number of your choice (1/2/3/4): ")
         
-        if option == "1":
-            return "{:.2f}".format(output)
-        elif option == "2":
-            return "{:.2e}".format(output)
-        elif option == "3":
-            fraction = Fraction(output).limit_denominator()
-            return str(fraction)
-        elif option == "4":
-            return str(output)
-        else:
-            print("Invalid option xD. Try again!")
+        try:
+            if option == "1":
+                return "{:.2f}".format(output)
+            elif option == "2":
+                return "{:.2e}".format(output)
+            elif option == "3":
+                fraction = Fraction(output).limit_denominator()
+                return str(fraction)
+            elif option == "4":
+                return str(output)
+            else:
+                raise ValueError("\033[93m: Invalid option xD. Try again!\033[0m")
+        except ValueError as raised :
+            print(raised)
+            return None
