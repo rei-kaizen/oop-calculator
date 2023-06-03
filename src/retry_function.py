@@ -1,7 +1,8 @@
 import pyfiglet
 from calculation import Calculate
+from output_format import OutputConverter
 
-class TryAgain:
+class TryAgain():
     """
     A class that let the user to retry the calculation.
     """
@@ -12,7 +13,8 @@ class TryAgain:
         If the user decides to make another attempt, the calc_function method should be called once more. 
         If the user decides to leave, a thank-you message is displayed.
         """
-        calc2 = Calculate()
+        calc = Calculate()
+        converter = OutputConverter()
         
         # loop to let the user make another attempt
         while True:
@@ -20,12 +22,13 @@ class TryAgain:
             self.user_attempt = input("Do you want to try again or not? (yes/no): ")
             
             # if yes, then perform the operation again.
-            if self.user_attempt == "yes":
-                output = calc2.calculation()
-                print(f"\033[91mResult:\033[0m {output}")
+            if self.user_attempt.lower() == "yes":
+                output = calc.calculation()
+                converted_output = converter.output_format(output)
+                print(f"\033[91mResult:\033[0m {converted_output}")
                 print(".\n.\n.")
                 
             # if no, Display “Thank you!”    
-            elif self.user_attempt == "no":
+            elif self.user_attempt.lower() == "no":
                 print(pyfiglet.figlet_format("Thank you!"))
                 break     

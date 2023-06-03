@@ -11,7 +11,6 @@ class OutputConverter(Calculate):
         
         option = input("Input the corresponding number of your choice (1/2/3/4): ")
         
-    
         if option == "1":
             return "{:.2f}".format(output)
         elif option == "2":
@@ -22,9 +21,4 @@ class OutputConverter(Calculate):
         elif option == "4":
             return str(output)
         else:
-            print("Invalid option. Try again.")
-        
-#Testing
-output = OutputConverter().calculation() 
-converted_output = OutputConverter().output_format(output)
-print("Converted Output:", converted_output)
+            print("Invalid option xD. Try again!")
