@@ -16,8 +16,9 @@ This is a oop version of my simple calculator program. Still, it has functions f
 2. Choose one of the four math operations: addition, subtraction, multiplication, or division.
 3. Enter the first number.
 4. Enter the second number.
-5. The program will display the result of the operation.
-6. You can choose to try again or exit the program.
+5. Choose among the output formats.
+6. The program will display the result of the operation.
+7. You can choose to try again or exit the program.
 
 or
 
@@ -43,6 +44,7 @@ or
 2. `calculation.py`: Defines the Calculate class that performs calculations based on user input.
 3. `retry_function.py`: Defines the TryAgain class that allows users to retry or exit the program.
 4. `main.py`: The main script that creates instances of the Calculate and TryAgain classes and controls the flow of the application.
+5. `output_format.py`: Defines the OutputConverter class which changes the output based on the user's preferences.
 <br>
 For detailed information about the implementation of each class and their methods, please refer to the source code files and their respective docstrings.
 
@@ -52,6 +54,6 @@ For detailed information about the implementation of each class and their method
 
 -----
 
-This object-oriented calculator uses many classes to handle user input, calculations, and retry functions. Its structure leads to modularity and ease of maintenance in the code. By providing an intuitive user interface, error handling, and a reusable code structure, this program's purpose is to enhance the user experience and make basic mathematical calculations more practical.
+This object-oriented calculator uses many classes to handle user input, calculations, retry functions and ouput format. Its structure leads to modularity and ease of maintenance in the code. By providing an intuitive user interface, error handling, and a reusable code structure, this program's purpose is to enhance the user experience and make basic mathematical calculations more practical.
 
 </details>
