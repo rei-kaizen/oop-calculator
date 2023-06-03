@@ -1,5 +1,5 @@
 # OOP Simple Calculator
-This is a oop version of my simple calculator program. Still, it has functions for doing simple mathematical operations, dealing with errors of any kind, and interacting with the user via a command-line interface.
+This is an oop version of my simple calculator program. Still, it has functions for doing simple mathematical operations, cuztomizing output, dealing with errors of any kind, and interacting with the user via a command-line interface.
 
 **The following is an old sample demo:** <br>
 ![img](calc-demo.png)
